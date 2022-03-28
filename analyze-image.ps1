@@ -1,17 +1,17 @@
-$key="YOUR_KEY"
-$endpoint="YOUR_ENDPOINT"
+$key= "3bc6bcbabad84449b4eccbc44e9a34c3"
+$endpoint="https://belajarcomputervision.cognitiveservices.azure.com/"
 
 
 # Code to call Computer Vision service for image analysis
 $img_file = "store-camera-1.jpg"
-if ($args.count -gt 0 -And $args[0] -in ("store-camera-1.jpg", "store-camera-2.jpg", "store-camera-3.jpg", "store-camera-4.jpg"))
+if ($args.count -gt 0 -And $args[0] -in ("store-camera-1.jpg", "store-camera-2.jpg", "store-camera-3.jpg", "store-camera-4.jpg", "olahraga", "bleki", "baca"))
 {
     $img_file = $args[0]
 }
 
-$img = "https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/vision/$img_file"
+$img = "https://raw.githubusercontent.com/keyrienl/cobaazureai/main/data/vision/$img_file"
 
-$headers = @{}
+$headers = @{}       
 $headers.Add( "Ocp-Apim-Subscription-Key", $key )
 $headers.Add( "Content-Type","application/json" )
 
